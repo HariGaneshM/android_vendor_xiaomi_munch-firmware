@@ -10,7 +10,7 @@ ifeq ($(TARGET_DEVICE),munch)
 
 $(info Including firmware for munch...)
 
-FIRMWARE_IMAGES := $(wildcard $(LOCAL_PATH)/images/*)
+FIRMWARE_IMAGES := $(wildcard $(LOCAL_PATH)/images/*.img)
 
 $(foreach f, $(notdir $(FIRMWARE_IMAGES)), \
     $(call add-radio-file,images/$(f)))
